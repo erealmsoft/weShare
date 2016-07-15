@@ -1,0 +1,10 @@
+img {
+     max-width: 100%;
+ }
+
+footer {
+    background-color: #d5d5d5;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 40px;
+}

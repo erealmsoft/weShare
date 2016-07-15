@@ -1,0 +1,62 @@
+<div>
+    <h2>CSS</h2>
+    <h3>什么是CSS?</h3>
+    <p>层叠样式表 (Cascading Style Sheets),常缩写为 CSS， 是一门 样式表 (stylesheet) 语言，用来描述 HTML、XML（包括各种 XML 语言如 SVG、XHTML）文档的呈现。CSS
+        描述了在屏幕、电子纸、音频或其它媒体上如何渲染元素。
+
+    </p>
+    <h3>css到底能干些什么？</h3>
+    <ol>
+        <li><a href="coolPage/mba.html" title="MacBook" target="_blank">MacBook</a></li>
+        <li><a href="coolPage/dabai.html" title="大白" target="_blank">大白</a></li>
+    </ol>
+    <h3>CSS为什么可以让页面变的漂亮？</h3>
+    <img src="image/webkit-render.png" alt="webkit render">
+    <h3>怎么使用CSS?</h3>
+    <ol>
+        <li>
+            <h4>行内</h4>
+            <div class="selector panel panel-default">
+                <p>写在页面上的标签里面</p>
+                <div class="panel-body">
+                    <img src="image/style-in-line.png" alt="style in line">
+                </div>
+                <p>不推荐这样使用，可复用性差，可维护性差</p>
+            </div>
+        </li>
+        <li>
+            <h4>嵌入式CSS</h4>
+            <div class="panel panel-default">
+                <p>写在html页面中</p>
+                <div class="panel-body">
+                    <img src="image/style-in-style-tag.png" alt="">
+                </div>
+                <p>尽量不要写内联样式，如果实在没办法，需要这样写的话就写在head里面的style标签里</p>
+            </div>
+        </li>
+        <li>
+            <h4>外部链接</h4>
+            <div class="panel panel-default">
+                <p>样式写在单独的文件里面，文件后缀名为.css</p>
+                <div class="panel-body">
+                    <img src="image/style-link.png" alt="">
+                </div>
+                <p>多个页面可以复用，方便维护</p>
+            </div>
+        </li>
+        <li>
+            <h4>导入</h4>
+            <div class="panel panel-default">
+                <p>写在单独文件中</p>
+                <div class="panel-body">
+                    <img src="image/style-link-import.png" alt="">
+                </div>
+            </div>
+            <p>不推荐使用，会破坏浏览器的并行加载</p>
+        </li>
+    </ol>
+    <h3>Syntax</h3>
+    <code>
+        selectorlist { property: value; [more property:value; pairs] }
+    </code>
+</div>

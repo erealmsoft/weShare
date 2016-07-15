@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <title>css share</title>
+    <meta name="description" content="css class ">
+    <meta name="author" content="Gavin">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/angular-bootstrap/ui-bootstrap-csp.css">
+    <link rel="stylesheet" href="lib/highlight/styles/dracula.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="html/share1/css/index.css">
+</head>
+<body ng-app="cssApp" ng-controller="cssController">
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="col-sm-1">
+            <a ui-sref="default"><img src="image/erealm_logo.png" alt="Home"></a>
+        </div>
+        <div class="col-sm-11">
+            <h1>
+                CSS Share
+            </h1>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <div class="clear-fix row">
+        <div class="col-sm-3">
+            <div class="list-group">
+                <a ui-sref="default" class="list-group-item" ui-sref-active="active">入门</a>
+                <a ui-sref="share1" class="list-group-item" ui-sref-active="active">选择器基础</a>
+                <a ui-sref="share2" class="list-group-item" ui-sref-active="active">属性</a>
+                <a ui-sref="share3" class="list-group-item" ui-sref-active="active">元素定位</a>
+                <a ui-sref="share4" class="list-group-item" ui-sref-active="active">各种布局</a>
+            </div>
+        </div>
+        <div class="col-sm-9">
+            <ui-view>
+
+            </ui-view>
+        </div>
+    </div>
+</div>
+<footer class="text-center">
+    123 GO GO GO &copy; erealmsoft
+</footer>
+</body>
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+<script type="text/javascript" src="lib/highlight/highlight.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/controllers.js"></script>
+<script type="text/javascript" src="js/routers.js"></script>
+<script type="text/javascript" src="html/share1/js/controller.js"></script>
+<script type="text/javascript" src="html/share2/js/controller.js"></script>
+<script type="text/javascript" src="html/share3/js/controller.js"></script>
+<script type="text/javascript" src="html/share4/js/controller.js"></script>
+</html>

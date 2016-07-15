@@ -1,0 +1,147 @@
+<div>
+    <h2>Selector</h2>
+    <div class="panel">
+        <h3>选择器</h3>
+        <div class="panel-body">
+            <h4>基础选择器</h4>
+            <a href="html/share1/example/example.html#basic" target="_blank" title="basic selector">example</a>
+            <ol>
+                <li>
+                    <h5>通配符</h5>
+                    <p>匹配当前网页上的所有标签,权重最低</p>
+                    <code>*{property:value}</code>
+                </li>
+                <li>
+                    <h5>标签选择器</h5>
+                    <p>匹配当前网页上面所有此种名称的标签，权重为1</p>
+                    <code>tagName{property:value}</code>
+                </li>
+                <li>
+                    <h5>类选择器</h5>
+                    <p>匹配当前网页上面所有带有此class的标签，权重为10</p>
+                    <code>.class{property:value}</code>
+                </li>
+                <li>
+                    <h5>ID选择器</h5>
+                    <p>匹配当前网页上面带有此ID的标签，权重为100</p>
+                    <code>#id{property:value}</code>
+                </li>
+                <li>
+                    <h5>属性选择器</h5>
+                    <p>匹配当前网页上面某个属性等于某一值的所有标签</p>
+                    <code>[attr='value']{property:value}</code>
+                </li>
+            </ol>
+            <h4>组合选择器</h4>
+            <a href="html/share1/example/example.html#combine" target="_blank" title="combine selector">example</a>
+            <ol>
+                <li><h5>后代选择器</h5></li>
+                <li><h5>子元素选择器</h5></li>
+                <li><h5>相邻元素选择器</h5></li>
+            </ol>
+            <h4>伪类</h4>
+            <a href="html/share1/example/example.html#standard_pseudo_classes" target="_blank"
+               title="standard pseudo classes">example</a>
+            <ol>
+                <li>:active</li>
+                <li>:focus</li>
+                <li>:hover</li>
+                <li>:visited</li>
+                <li>······</li>
+            </ol>
+            <h4>伪元素</h4>
+            <a href="html/share1/example/example.html#pseudo_elements" target="_blank"
+               title="pseudo elements">example</a>
+            <ol>
+                <li>::before</li>
+                <li>::after</li>
+                <li>::first-line</li>
+                <li>::first-letter</li>
+                <li>······</li>
+            </ol>
+            <h4>讨论：伪类和伪元素的区别？</h4>
+            <p></p>
+        </div>
+    </div>
+    <div class="panel">
+        <h3>选择器的权重</h3>
+        <a href="html/share1/example/example.html#selector_weight" target="_blank" title="selector weight">example</a>
+        <div class="panel-body">
+            <p>选择器的在浏览器中的权重从上到下依次减小</p>
+            <ol>
+                <li>important</li>
+                <li>内联</li>
+                <li>ID</li>
+                <li>类</li>
+                <li>标签、伪类、属性</li>
+                <li>伪对象</li>
+                <li>继承</li>
+                <li>通配符</li>
+            </ol>
+        </div>
+    </div>
+    <div class="panel" id="selector-test-container">
+        <h3>练习</h3>
+        <div class="panel-body">
+            <h4>小练习1：请判断以下几个span标签最终的字体颜色是什么</h4>
+            <div class="content">
+                <h5>html</h5>
+            <pre><code class="html">
+            &#60;div class="selector-test"&#62;
+                &#60;span id="span_test1" style="background-color: #d5d5d5;" class="span-test">span1&#60;/span&#62;
+                &#60;span id="span_test2" class="span-test">span2&#60;/span&#62;
+                &#60;span id="span_test3" class="span-test">span3&#60;/span&#62;
+            &#60;/div&#62;
+        </code></pre>
+                <h5>css</h5>
+            <pre><code class="css">
+                .selector-test .selector-span-test{
+                    background-color: blue;
+                }
+                     .selector-test .span-test {
+                    background-color: blue;
+                }
+
+                .selector-span-test #selector_span_test1 {
+                    background-color: green;
+                }
+
+                #span_test1 {
+                    background-color: yellow;
+                }
+
+                .selector-span-test {
+                    background-color: #c0a16b !important;
+                }
+                .selector-span-test1 {
+                    background-color:greenyellow;
+                }
+                .selector-span-test1 {
+                    background-color:saddlebrown;
+                }
+            </code></pre>
+                <h3>result</h3>
+                <div class="selector-test">
+                    <button class="btn btn-default btn-success" ng-click="showPritice1Result();"
+                            ng-bind="showResult1Text">
+                        查看结果
+                    </button>
+                <span id="selector_span_test1" style="background-color: #d5d5d5;"
+                      ng-class="{'selector-span-test':showResult1}">span1</span>
+                    <span id="selector_span_test2" ng-class="{'selector-span-test':showResult1}">span2</span>
+                    <span id="selector_span_test3" ng-class="{'selector-span-test':showResult1}">span3</span>
+                    <span ng-class="{'selector-span-test selector-span-test1':showResult1}">span3</span>
+                    <span ng-class="{'selector-span-test1 selector-span-test2':showResult1}">span4</span>
+                </div>
+            </div>
+            <h4>小练习2：写一个静态页面以下为要求</h4>
+            <ol>
+                <li>页面结构完整</li>
+                <li>语义明确</li>
+                <li>用链接的方式引入外部样式表</li>
+                <li>至少使用4种选择器</li>
+                <li>选择器中定义的样式规则无要求，但请尽量保持页面美观</li>
+            </ol>
+        </div>
+    </div>
+</div>

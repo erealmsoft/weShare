@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <title>选择器</title>
+    <meta name="description" content="lesson 1 example">
+    <meta name="author" content="Gavin">
+    <link rel="stylesheet" href="../../../lib/highlight/styles/darkula.css">
+    <link rel="stylesheet" type="text/css" href="./example.css"/>
+</head>
+<body>
+<header>
+    <h1 class="text-center">Lesson 1 example</h1>
+</header>
+<div class="container">
+    <h2>选择器</h2>
+    <div class="content">
+        <h2 id="basic">基础选择器</h2>
+        <div class="panel">
+            <ol>
+                <li><p>标签选择器</p></li>
+                <li><p class="class-selector1">类选择器1</p></li>
+                <li><p class="class-selector2">类选择器2</p></li>
+                <li><p id="id-selector">ID 选择器</p></li>
+                <li><input type="text" name="attrSelector" placeholder="attr selector"></li>
+            </ol>
+        </div>
+        <h2 id="combine">组合选择器</h2>
+        <div class="panel">
+            <ol>
+                <li><p class="houdai">这是<strong>后<i>代</i>选</strong>择器</p></li>
+                <li><p class="child">这是<strong>子<i>元素</i>选</strong>择器</p></li>
+                <li>
+                    <p>下面的span被选中</p>
+                    <span>相邻元素选择器</span>
+                </li>
+            </ol>
+        </div>
+        <h2 id="standard_pseudo_classes">伪类</h2>
+        <div class="panel">
+            <ol>
+                <li>
+                    <div class="first-child-example">
+                        <div>1</div>
+                        <p>2</p>
+                        <p>3</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="hover">鼠标停在上面试试</div>
+                </li>
+                <li><input type="text" name="focus" placeholder="点击后看看效果"></li>
+            </ol>
+        </div>
+        <h2 id="pseudo_elements">伪元素</h2>
+        <div class="panel">
+            <ol>
+                <li><p class="before-example">before</p></li>
+                <li><p class="first-line-example">
+                    So now, we're at $0.10 for the minimum voting, 80% for the savings rate, and 10% for the
+                    profitability.
+                    That leaves 5% of the initial fee unused. What should happen? Now we want to start more voting, so
+                    that
+                    images can be properly ranked. Once we hit a situation where the profitability rate is correct, then
+                    all
+                    the incoming money goes towards votes, utilizing the drop-off and re-entry info.
+                </p>
+                </li>
+            </ol>
+
+
+        </div>
+    </div>
+    <h2 id="selector_weight">选择器权重</h2>
+    <div class=content>
+        <ol>
+            <li><p style="color: red;" class="text-blue">我的字体颜色是蓝色的——内联（红色）+important关键字（蓝色）</p></li>
+            <li><p style="color: red;" id="text-green">我的字体颜色是红色的——内联（红色）+ID（绿色）</p></li>
+            <li><p class="text-red" id="text-green2">我的字体颜色是绿色的——ID（绿色）+类（红色）</p></li>
+        </ol>
+    </div>
+
+</div>
+<footer class="text-center">
+    123 GO GO GO &copy; erealmsoft
+</footer>
+</body>
+</html>
