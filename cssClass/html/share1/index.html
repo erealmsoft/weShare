@@ -47,6 +47,36 @@
                 <li>:focus</li>
                 <li>:hover</li>
                 <li>:visited</li>
+                <li>
+                    :first-child
+                    <div class="content">
+                        <pre><code class="html">
+    &#60;ul&#62;
+        &#60;li&#62;child1&#60;/li&#62;
+        &#60;li&#62;child2&#60;/li&#62;
+        &#60;li&#62;child3&#60;/li&#62;
+    &#60;/ul&#62;
+</code></pre>
+                        <pre><code class="css">
+    #first_child_example ul li:first-child{
+        background-color: red;
+    }
+                        </code></pre>
+                    </div>
+                    <div id="first_child_example">
+                        <button class="btn btn-default btn-success"
+                                ng-click="showFirstChildExample()" ng-bind="showFirstChildText"></button>
+                        <ul ng-show="showFirstChild">
+                            <li>
+                                <div>div1</div>
+                                <div>div2</div>
+                                <div>div3</div>
+                            </li>
+                            <li>child2</li>
+                            <li>child3</li>
+                        </ul>
+                    </div>
+                </li>
                 <li>······</li>
             </ol>
             <h4>伪元素</h4>
@@ -86,48 +116,49 @@
             <h4>小练习1：请判断以下几个span标签最终的字体颜色是什么</h4>
             <div class="content">
                 <h5>html</h5>
-            <pre><code class="html">
-            &#60;div class="selector-test"&#62;
-                &#60;span id="span_test1" style="background-color: #d5d5d5;" class="span-test">span1&#60;/span&#62;
-                &#60;span id="span_test2" class="span-test">span2&#60;/span&#62;
-                &#60;span id="span_test3" class="span-test">span3&#60;/span&#62;
-            &#60;/div&#62;
-        </code></pre>
-                <h5>css</h5>
-            <pre><code class="css">
-                .selector-test .selector-span-test{
-                    background-color: blue;
-                }
-                     .selector-test .span-test {
-                    background-color: blue;
-                }
+            <pre>
+<code class="html">
+    &#60;div class="selector-test"&#62;
+        &#60;span id="span_test1" style="background-color: #d5d5d5;" class="span-test">span1&#60;/span&#62;
+        &#60;span id="span_test2" class="span-test">span2&#60;/span&#62;
+        &#60;span id="span_test3" class="span-test">span3&#60;/span&#62;
+    &#60;/div&#62;
+</code></pre>
+                <h5>css</h5><pre>
+<code class="css">
+    .selector-test .selector-span-test{
+        background-color: blue;
+    }
+         .selector-test .span-test {
+        background-color: blue;
+    }
 
-                .selector-span-test #selector_span_test1 {
-                    background-color: green;
-                }
+    .selector-span-test #selector_span_test1 {
+        background-color: green;
+    }
 
-                #span_test1 {
-                    background-color: yellow;
-                }
+    #span_test1 {
+        background-color: yellow;
+    }
 
-                .selector-span-test {
-                    background-color: #c0a16b !important;
-                }
-                .selector-span-test1 {
-                    background-color:greenyellow;
-                }
-                .selector-span-test1 {
-                    background-color:saddlebrown;
-                }
-            </code></pre>
+    .selector-span-test {
+        background-color: #c0a16b !important;
+    }
+    .selector-span-test1 {
+        background-color:greenyellow;
+    }
+    .selector-span-test1 {
+        background-color:saddlebrown;
+    }
+</code></pre>
                 <h3>result</h3>
                 <div class="selector-test">
                     <button class="btn btn-default btn-success" ng-click="showPritice1Result();"
                             ng-bind="showResult1Text">
                         查看结果
                     </button>
-                <span id="selector_span_test1" style="background-color: #d5d5d5;"
-                      ng-class="{'selector-span-test':showResult1}">span1</span>
+                    <span id="selector_span_test1" style="background-color: #d5d5d5;"
+                          ng-class="{'selector-span-test':showResult1}">span1</span>
                     <span id="selector_span_test2" ng-class="{'selector-span-test':showResult1}">span2</span>
                     <span id="selector_span_test3" ng-class="{'selector-span-test':showResult1}">span3</span>
                     <span ng-class="{'selector-span-test selector-span-test1':showResult1}">span3</span>

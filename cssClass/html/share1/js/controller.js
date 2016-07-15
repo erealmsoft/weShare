@@ -7,6 +7,13 @@
 
     function share1Controller($scope) {
         hljs.initHighlighting();
+        $scope.showFirstChildText = '显示答案';
+        $scope.showFirstChild = false;
+        $scope.showFirstChildExample = function () {
+            $scope.showFirstChild = !$scope.showFirstChild;
+            $scope.showFirstChildText = $scope.showFirstChild ? '隐藏答案' : '显示答案';
+
+        };
         $scope.showResult1 = false;
         $scope.showResult1Text = '显示答案';
         $scope.showPritice1Result = function () {

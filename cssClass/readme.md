@@ -20,3 +20,6 @@
 * bootstrap3
 * angular-ui-router
 * highlight.js
+
+## About practice
+* Please commit your practice to every share practice dir and named your practice folder use yourself name.
