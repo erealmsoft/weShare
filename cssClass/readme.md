@@ -1,7 +1,7 @@
 #CSS
 ##start
 1. Open cssClass dir with webstrom
-2.
+2. Install bower dependence
     ```
         bower install
     ```
