@@ -1,29 +1,22 @@
-# CSS
-## 基础
-### 认识CSS
-    1. CSS ？
-    2. CSS3 ？
-### 选择器 
-    1. 基本选择器
-    2. 复合选择器
-    3. 伪元素选择器
-    4. 伪类选择器
-### 属性
-    1. 边框
-    2. 前景和背景
-    3. 文本样式
-### 布局
-    1. 盒模型
-    2. 布局
-### 动画
-    1. 过渡
-    2. 动画
-    3. 变换
-### 其它
-    1. 透明
-    2. 光标
-    3. 表格
-    3. 列表
-## 进阶
-### 高质量的CSS
-### 浏览器兼容处理
+#CSS
+##start
+1. Open cssClass dir with webstrom
+2.
+    ```
+        bower install
+    ```
+3. Run cssClass/index.html
+
+## Dir means
+* coolPage: Some beautiful and cool page
+* css: default.html and home page style
+* html: all example and content in there
+* image: all image the html used
+* js: router, index controller and main app js file
+* lib: some package that can't install by bower or npm
+
+## Current used
+* angular
+* bootstrap3
+* angular-ui-router
+* highlight.js
