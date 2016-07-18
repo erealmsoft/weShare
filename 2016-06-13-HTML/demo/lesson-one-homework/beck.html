@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <title>Html Home work</title>
+    <meta name="description" content="Gavin html home work">
+    <meta name="author" content="Gavin">
+    <style>
+        table {
+            width: 100%;
+        }
+
+        th, td {
+            border: thin solid #d5d5d5;
+            text-align: center;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;;
+            margin: 0px auto;
+            width: 90%;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1 class="text-center">Gavin Home Work</h1>
+</header>
+<div class="container">
+    <div class="content">
+        <h3>Table</h3>
+        <table>
+            <caption>
+                Web Learning
+            </caption>
+            <thead>
+            <th>steps</th>
+            <th>html</th>
+            <th>css</th>
+            <th>javascript</th>
+            </thead>
+            <tbody>
+            <tr>
+                <td>step1</td>
+                <td>tag</td>
+                <td colspan="2">grammar</td>
+            </tr>
+            <tr>
+                <td>step2</td>
+                <td>attribute</td>
+                <td>selector</td>
+                <td>function</td>
+            </tr>
+            <tr>
+                <td>step3</td>
+                <td colspan="2">coding</td>
+                <td>deep</td>
+            </tr>
+            <tr>
+                <td>step4</td>
+                <td colspan="3"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="content">
+        <h3>Form</h3>
+        <form action="javascript:void(0);" name="info">
+            <table>
+                <caption>A info form</caption>
+                <thead>
+                <th>item</th>
+                <th>value</th>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Birthday:</td>
+                    <td><input type="date" name="bday"></td>
+                </tr>
+                <tr>
+                    <td>Birthday:</td>
+                    <td><input type="datetime" name="bdaytime"></td>
+                </tr>
+                <tr>
+                    <td>Birthday:</td>
+                    <td><input type="datetime-local" name="bdaytime"></td>
+                </tr>
+                <tr>
+                    <td>
+                        age
+                    </td>
+                    <td>
+                        <input type="number" name="points" step="3" min="0" value="0">
+                    </td>
+                </tr>
+                <tr>
+                    <td> E-mail:</td>
+                    <td><input type="email" name="email"></td>
+                </tr>
+                <tr>
+                    <td>Birthday:</td>
+                    <td><input type="month" name="bdaymonth"></td>
+                </tr>
+                <tr>
+                    <td>Number(1~5):</td>
+                    <td><input type="number" name="quantity" min="1" max="5"></td>
+                </tr>
+                <tr>
+                    <td>Tel:</td>
+                    <td><input type="tel" name="usrtel"></td>
+                </tr>
+                <tr>
+                    <td>Home page:</td>
+                    <td><input type="url" name="homepage"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" value="submit"/>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+    <form action="javascript:void(0);" novalidate>
+        <div>
+            <label>
+                Enter a date before 1980-01-01:
+                <input type="date" name="maxdate" max="1979-12-31">
+            </label>
+        </div>
+        <div>
+            <label>Enter a date after 2000-01-01:
+                <input type="date" name="bday" min="2000-01-02">
+            </label>
+        </div>
+
+        <div>
+            <label>
+                select a file
+                <input type="file" name="file" multiple>
+            </label>
+        </div>
+        <div>
+            <label>Country code:
+                <input type="text" name="country_code" pattern="[A-Za-z]{3}" title="Three letter country code">
+            </label>
+        </div>
+        <input type="submit" value="submit">
+    </form>
+
+</div>
+<footer class="text-center">
+    The End&nbsp;&copy;&nbsp;Gavin
+</footer>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="train">
+<head>
+    <meta charset="UTF-8" />
+    <title>HTML STUDY</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="../stylesheets/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="../stylesheets/bootflat.min.css" type="text/css"/>
+    <link rel="stylesheet/less" href="../stylesheets/lessonOne.less"/>
+    <script src="../stylesheets/less.min.js"></script>
+    <script src="../public/javascripts/libs/angular.min.js"></script>
+    <script src="../public/javascripts/libs/jquery.min.js"></script>
+    <script src="../public/javascripts/libs/plugins/angular-locale_zh-cn.js"></script>
+    <script src="../public/javascripts/libs/plugins/angular-touch.min.js"></script>
+    <script src="../public/javascripts/libs/plugins/angular-animate.min.js"></script>
+    <script src="../public/javascripts/libs/plugins/bootstrap.min.js"></script>
+    <script src="../public/javascripts/libs/plugins/ui-bootstrap-tpls.min.js"></script>
+    <script src="../public/javascripts/train.js"></script>
+    <script src="../public/javascripts/client.js"></script>
+    <script src="../public/javascripts/app/lessonOneController.js"></script>
+</head>
+
+<body>
+<div class="html-study container" ng-controller="studyController">
+    <h1 class="share-title">HTML SHARE</h1>
+</div>
+
+<script>
+    function query_get(){
+        console.log(window.location);
+        var querystr = window.location.href.split("?");
+        return querystr[1];
+    }
+    var gets = query_get();
+    var gets_array = gets.split("&");
+    for (var i=0; i<gets_array.length;i++)
+    {
+        var getvar = gets_array[i].split('=');
+        var output = getvar[0] + " 的值是 " + "\"" + getvar[1] + "\"<br>";
+        document.write(output);
+    }
+</script>
+</body>
+</html>

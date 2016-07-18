@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<!-- http://blog.csdn.net/freshlover/article/details/25322839/ -->
+<html>
+<head>
+	<!-- 旧的HTML，不推荐
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8"> -->
+	<meta charset="utf-8">
+	<meta name="renderer" content="webkit">
+	<!-- 禁止了把数字转化为拨号链接 -->
+	<meta name="format-detection" content="telephone=no, email=no">
+	<meta name="application-name" content="西安瑞木">
+	<!-- "msapplication-tooltip" 元数据提供其他工具提示文本，当光标悬停在 Windows 的“开始”菜单中或桌面上的固定网站快捷方式上时，将会出现这些文本。 -->
+	<meta name="msapplication-tooltip" content="西安瑞木">
+	<!--  
+	说明："msapplication-starturl" 元数据包含应用程序的根 URL。起始 URL 可以是完全限定或相对于当前文档的。只允许 HTTP 和 HTTPS 协议。如果缺少此元素，则改为使用当前页的地址。
+	用法：<meta name="msapplication-starturl" content="./" />
+	补充："msapplication-starturl" 元数据创建你的网站的公共入口点。当存在此元数据时，固定网站会启动起始 URL 而不是最初拖动到任务栏的页面。更重要的是，起始页中声明的运行时元数据将在每次启动网站时重新定义导航按钮颜色和静态跳转列表任务。（有关详细信息，请参阅运行时元数据部分。）
+
+	作为如何使用 "msapplication-starturl" 的示例，请考虑一个提供多个类型的计算器仿真器的站点：一个具有标准布局，一个具有科学布局，一个具有统计函数。如果没有起始 URL，用户可能只将科学计算器固定到任务栏，从而无法轻松地访问集合中的其他计算器。通过添加起始 URL，网站开发人员可以声明网站的公共入口点。
+
+	<meta name="msapplication-starturl" content="./CalculatorHome.html" />
+
+	通过将安装时元数据添加到仿真程序页面，网站开发人员可控制用户访问网站的方式。通过在起始页中添加跳转列表元数据，网站开发人员可以更轻松地控制用户选择要使用的计算器样式的方式。有关详细信息，请参阅向跳转列表添加任务。
+	处理服务器重定向
+
+	如果你的起始 URL 重定向到其他网页，请确保声明提供给客户端的网页中的所有运行时元数据。如果服务器重定向到新路径，则你的起始 URL 必须包括该路径和结尾反斜杠 (/)。
+
+	例如，如果 "http://contoso.com/" 重定向至 "http://www.contoso.com/Home/"，则起始 URL 必须包括新路径和结尾反斜杠，如下所示：
+
+	<meta name="msapplication-starturl" content="http://www.contoso.com/Home/" />
+	OR
+	<meta name="msapplication-starturl" content="/Home/" />-->
+	<meta name="msapplication-starturl" content="./"> 
+	<!-- 在Windows 8上，我们可以将网站固定在开始屏幕上，而且支持个性化自定义色块icon和背景图片。这个标签是用来定义色块的背景图的。色块图应该为144*144像素的png格式图片，背景透明。
+	用法：<meta name="msapplication-TileImage" content="tile.png"> -->
+	<meta name="msapplication-tileimage" content="=http://static11.elemecdn.com/apple-touch-icon.png?v=2">
+	<!-- 它能够将一个网站如同程序固定在 Windows Vista 和 Windows 7 的任务栏中，并且在点击图标后显示一个相关网站的列表。与其他网站元数据一样，可使用 meta 元素定义静态任务。下一个任务向跳转列表（访问http://msdn.microsoft.com/zh-cn/library/ie/gg491725%28v=vs.85%29.aspx）添加任务说明了如何执行此操作。
+	用法：<meta name="msapplication-task" content="name=8783手游网;action-uri=http://www.8783.com;icon-uri=../static/8783.ico" /> -->
+	<meta name="msapplication-task" content="name=切换地区;action-uri=http://ele.me/home;icon-uri=http://static11.elemecdn.com/apple-touch-icon.png?v=2">
+	<meta name="msapplication-task" content="name=我要订餐;action-uri=http://ele.me?from=IE;icon-uri=http://static11.elemecdn.com/apple-touch-icon.png?v=2">
+	<!-- 据说是QQ云平台的验证码 -->
+	<meta property="qc:admins" content="2263606250655">
+	<!-- web app iOS所用的icon 
+	使用apple-touch-icon，那么iOS会给icon加上一些NB的效果，包括圆角，阴影，反光。如果使用apple-touch-icon-precomposed则iOS不会加这个效果。 -->
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-precomposed.png"/>
+	<!-- http-equiv顾名思义，相当于http的文件头作用。
+	Forces the browser to render as that particular version's standards. It is not supported for IE7 and below. 
+	content="IE=EmulateIE8" 
+	also can be set in apache and Nginx -->
+	<!-- -- IE8的专用标记 
+	Google Chrome Frame(GCF):可使用开放式网络技术（如 HTML5 canvas 标记）立即启动，甚至包括 Internet Explorer 6、7 或 8 尚不支持的技术。
+	利用 JavaScript 性能增强功能，使应用程序速度更快，响应更灵敏。 
+	如果安装了GCF，则使用GCF来渲染页面「”chrome=1″」，如果没有安装GCF，则使用最高版本的IE内核进行渲染
+	1.如果支持Google Chrome Frame：GCF，则使用GCF渲染；
+	2.如果系统安装ie8或以上版本，则使用最高版本ie渲染；
+	3.否则，这个设定可以忽略。
+	-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!-- no-cache: 先发送请求，与服务器确认该资源是否被更改，如果未被更改，则使用缓存。
+	no-store: 不允许缓存，每次都要去服务器上，下载完整的响应。（安全措施）
+	public : 缓存所有响应，但并非必须。因为max-age也可以做到相同效果
+	private : 只为单个用户缓存，因此不允许任何中继进行缓存。（比如说CDN就不允许缓存private的响应）
+	maxage : 表示当前请求开始，该响应在多久内能被缓存和重用，而不去服务器重新请求。例如：max-age=60表示响应可以再缓存和重用 60 秒。 -->
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta name="viewport" content="initial-scale=1,minimum-scale=1">
+	<meta name="description" content="西安瑞木">
+	<meta name="keywords" content="HTML">
+	<meta name="author" content="zeno">
+	<!-- 1.none : 搜索引擎将忽略此网页，等价于noindex，nofollow。
+	2.noindex : 搜索引擎不索引此网页。
+	3.nofollow: 搜索引擎不继续通过此网页的链接索引搜索其它的网页。
+	4.all : 搜索引擎将索引此网页与继续通过此网页的链接索引，等价于index，follow。
+	5.index : 搜索引擎索引此网页。
+	6.follow : 搜索引擎继续通过此网页的链接索引搜索其它的网页。 -->
+	<meta name="robots" content="none">
+	<meta name="copyright" content="EREALM INFO & TECH">
+	<meta name="generator" content="sublime3">
+	<!-- 说明：如果页面不是经常更新，为了减轻搜索引擎爬虫对服务器带来的压力，可以设置一个爬虫的重访时间。如果重访时间过短，爬虫将按它们定义的默认时间来访问。 -->
+	<meta name="revisit-after" content="7 days" >
+	<meta name="mobile-agent" content="undefined">
+	<link rel="mask-icon" sizes="any" href="http://img.t.sinajs.cn/t6/style/images/apple/wbfont.svg" color="black">
+	<link rel="shortcut icon" type="image/x-icon" href="http://weibo.com/favicon.ico">
+	<title>html test</title>
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<style type="text/css">
+	.imgbox{
+		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAE1JREFUKJHV0MEOwCAIA9DW7MP983pymUaweluv8IAABJFUJdWonqEeD0/IwwHK8QatsYlGfIhezM9WOc8jSQAoTvMqTzY1u+Z6449gA9r24D4iZ6wwAAAAAElFTkSuQmCC);   
+    	border: 1px solid #ccc;
+	    background-color: #E0E0E0;
+	    background-size: 50%;
+	    background-repeat: no-repeat;
+	    background-position: 50%;
+	    position: relative;
+	}
+	.dealcard-img {
+	    position: absolute;
+	    width: 200px;
+	    height: 200px;
+	    text-align: center;
+	    overflow: hidden;
+	}
+	ul{
+		list-style-type:none
+	}
+	</style>
+</head>
+<body>
+	<h1>My First HTML Page</h1>
+	<p>段落</p>
+	<a target="_blank" href="http://stackoverflow.com/questions/492809/when-to-use-img-vs-css-background-image">When to use IMG vs. CSS background-image?</a>
+	<div><input type="search" /><input type="text" disabled="disabled" /></div>
+	<table border="1">
+		<tr>
+			<td>11</td>
+			<td>12</td>
+			<td>13</td>
+		</tr>
+		<tr>
+			<td colspan=2>合并</td>
+			<td>23</td>
+		</tr>
+	</table>
+	<ul>
+		<li>Coffee</li>
+		<li>Milk</li>
+		<li>meat</li>
+		<li>water</li>
+	</ul>
+	<ol>
+		<li>Coffee</li>
+		<li>Milk</li>
+		<li>meat</li>
+		<li>water</li>
+	</ol>
+	<select>
+		<option value="1">上海</option>
+		<option value="2">北京</option>
+		<option value="3">深圳</option>
+	</select>
+	<h2>表单<h2>
+	<form>
+		<ul>
+			<li>用户：<input type="text" name="user"></li>
+			<li>密码：<input type="password" name="password"></li>
+			<li><button type="submit">submit</button></li>
+		</ul>
+	</form>
+	The <abbr title="People's Republic of China">PRC</abbr> is very good.
+	 <del>delete</del> a word.
+	 <code>hello world!</code>
+
+	<div class="dealcard-img imgbox">
+		<img src="http://p1.meituan.net/200.0/deal/833949a6228d95eb0b139adec03b3b6f34227.jpg">
+	</div>
+</body>
+</html>
